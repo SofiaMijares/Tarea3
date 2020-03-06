@@ -54,9 +54,11 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
     if(_listBox.values.first == null){
       throw EmptyDatabase();
     }
+    
     //CARGA
     List<TodoRemainder>todosList = _listBox.values.map((todo) => todo as TodoRemainder).toList();
     //values: TodoRemainder
+    return todosList;
 
     // debe haber un adapter para que la BD pueda detectar el objeto
   }
